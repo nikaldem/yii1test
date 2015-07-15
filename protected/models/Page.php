@@ -11,14 +11,28 @@
 class Page extends CActiveRecord
 {
 	/**
+     * @param string $className active record class name
 	 * @return string the associated database table name
 	 */
+    public static function model($className=__CLASS__)
+    {
+        return parent::model($className);
+    }
+
+    /**
+     * @return string the associated database table name
+     */
 	public function tableName()
 	{
-		return 'page';
+		return '{{page}}';
 	}
 
-	/**
+    /*public function primaryKey()
+    {
+        return 'post_id';
+    }
+    */
+    /**
 	 * @return array validation rules for model attributes.
 	 */
 	public function rules()

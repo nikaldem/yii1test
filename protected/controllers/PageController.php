@@ -62,7 +62,7 @@ class PageController extends Controller
 	 */
 	public function actionCreate()
 	{
-		$model=new Page;
+		$model = new Page;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
